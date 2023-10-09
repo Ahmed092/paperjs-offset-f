@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "lint": "tslint -p tsconfig.json",
-    "build": "tsc --module commonjs",
+    "build": "tsc --module commonjs && node build.js",
     "prepare": "npm run build"
   },
   "dependencies": {
