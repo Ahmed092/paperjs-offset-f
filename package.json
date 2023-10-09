@@ -5,10 +5,14 @@
   "main": "dist/index.umd.js",
   "module": "dist/index.es5.js",
   "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist/index.es5.js",
+    "dist/types/index.d.ts"
+  ],
   "scripts": {
     "lint": "tslint -p tsconfig.json",
-    "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs && node build.js"
+    "build": "tsc --module commonjs",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "paper": "^0.12.4"
